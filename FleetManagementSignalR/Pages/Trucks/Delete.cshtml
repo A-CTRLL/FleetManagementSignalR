@@ -1,0 +1,76 @@
+﻿@page
+@model FleetManagementSignalR.Pages.Trucks.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Truck</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.AdditionalProperty1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.AdditionalProperty1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.AdditionalProperty2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.AdditionalProperty2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.TruckProperty1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.TruckProperty1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.TruckProperty2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.TruckProperty2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.Make)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.Make.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.Model.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.Color)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.Color)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.FuelType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.FuelType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Truck.AverageSpeed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Truck.AverageSpeed)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Truck.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+﻿@page
+@model FleetManagementSignalR.Pages.Vehicles.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Vehicle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vehicle.Id" />
+            <div class="form-group">
+                <label asp-for="Vehicle.Color" class="control-label"></label>
+                <input asp-for="Vehicle.Color" class="form-control" />
+                <span asp-validation-for="Vehicle.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.FuelType" class="control-label"></label>
+                <input asp-for="Vehicle.FuelType" class="form-control" />
+                <span asp-validation-for="Vehicle.FuelType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vehicle.AverageSpeed" class="control-label"></label>
+                <input asp-for="Vehicle.AverageSpeed" class="form-control" />
+                <span asp-validation-for="Vehicle.AverageSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

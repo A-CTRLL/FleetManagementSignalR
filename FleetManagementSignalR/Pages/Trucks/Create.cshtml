@@ -1,0 +1,72 @@
+﻿@page
+@model FleetManagementSignalR.Pages.Trucks.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Truck</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Truck.AdditionalProperty1" class="control-label"></label>
+                <input asp-for="Truck.AdditionalProperty1" class="form-control" />
+                <span asp-validation-for="Truck.AdditionalProperty1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.AdditionalProperty2" class="control-label"></label>
+                <input asp-for="Truck.AdditionalProperty2" class="form-control" />
+                <span asp-validation-for="Truck.AdditionalProperty2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.TruckProperty1" class="control-label"></label>
+                <input asp-for="Truck.TruckProperty1" class="form-control" />
+                <span asp-validation-for="Truck.TruckProperty1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.TruckProperty2" class="control-label"></label>
+                <input asp-for="Truck.TruckProperty2" class="form-control" />
+                <span asp-validation-for="Truck.TruckProperty2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.MakeId" class="control-label"></label>
+                <select asp-for="Truck.MakeId" class ="form-control" asp-items="ViewBag.MakeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.ModelId" class="control-label"></label>
+                <select asp-for="Truck.ModelId" class ="form-control" asp-items="ViewBag.ModelId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.Color" class="control-label"></label>
+                <input asp-for="Truck.Color" class="form-control" />
+                <span asp-validation-for="Truck.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.FuelType" class="control-label"></label>
+                <input asp-for="Truck.FuelType" class="form-control" />
+                <span asp-validation-for="Truck.FuelType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Truck.AverageSpeed" class="control-label"></label>
+                <input asp-for="Truck.AverageSpeed" class="form-control" />
+                <span asp-validation-for="Truck.AverageSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,47 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Vehicles page";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vehicle Control Centre</title>
+    <!-- Include necessary CSS and JavaScript libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Vehicle Control Centre</h2>
+        <hr />
+
+        <!-- Display the list of vehicles -->
+        <div id="vehicle-list">
+            <!-- You can populate this div with a list of vehicles using JavaScript -->
+            <!--Table for vehivle list-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vehicle Type</th>
+                        <th>Average Speed</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <!-- Buttons for controlling vehicles -->
+        <div class="mt-3">
+            <button id="drive-btn" class="btn btn-primary">Drive</button>
+            <button id="stop-btn" class="btn btn-danger">Stop</button>
+            <button id="reverse-btn" class="btn btn-warning">Reverse</button>
+        </div>
+    </div>
+</body>
+</html>
+
+    <!-- Include necessary JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>

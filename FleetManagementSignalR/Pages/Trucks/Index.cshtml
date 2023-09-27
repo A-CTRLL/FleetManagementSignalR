@@ -1,0 +1,84 @@
+﻿@page
+@model FleetManagementSignalR.Pages.Trucks.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].AdditionalProperty1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].AdditionalProperty2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].TruckProperty1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].TruckProperty2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].Color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].FuelType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Truck[0].AverageSpeed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Truck) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalProperty1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalProperty2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TruckProperty1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TruckProperty2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Make.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageSpeed)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
